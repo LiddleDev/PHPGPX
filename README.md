@@ -1,4 +1,14 @@
+# PHPGPX
+
 PHPGPX is an easy to use GPX Parser written in PHP.
+
+## Installation
+
+Available via composer
+
+    "require": {
+        "craygl/phpgpx": "^1.0"
+    }
 
 ## Example Usage
 
