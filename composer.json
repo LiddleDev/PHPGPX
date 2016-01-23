@@ -18,7 +18,7 @@
   },
   "autoload": {
     "psr-4": {
-      "PHPGPX": "src/"
+      "PHPGPX\\": "src/"
     }
   }
 }
