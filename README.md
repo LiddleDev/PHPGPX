@@ -2,7 +2,9 @@ PHPGPX is an easy to use GPX Parser written in PHP.
 
 ## Example Usage
 
-    $gpx = GPX::fromXML($xml);
+    $GPXParser = new GPXParser();
+
+    $gpx = GPXParser->parseXML($xml);
 
     foreach ($gpx->getTracks() as $track) {
         foreach ($track->getTrackSegments() as $trackSegment) {
