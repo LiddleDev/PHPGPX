@@ -7,9 +7,14 @@ class GPXParser
 
     }
 
+    /**
+     * @param SimpleXMLElement $xml
+     * @return GPX
+     * @throws InvalidGPXException
+     */
     public function parseXML(SimpleXMLElement $xml) {
         $gpx = GPX::fromXML($xml);
 
-        dd($gpx);
+        return $gpx;
     }
 }
