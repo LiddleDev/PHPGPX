@@ -2,8 +2,26 @@
 
 class Extensions implements FromXML
 {
-    public function __construct() {
+    protected $xml;
 
+    public function __construct(SimpleXMLElement $xml = null) {
+        $this->xml = $xml;
+    }
+
+    /**
+     * @return SimpleXMLElement
+     */
+    public function getXml()
+    {
+        return $this->xml;
+    }
+
+    /**
+     * @param SimpleXMLElement $xml
+     */
+    public function setXml($xml)
+    {
+        $this->xml = $xml;
     }
 
     /**
@@ -12,6 +30,6 @@ class Extensions implements FromXML
      */
     public static function fromXML(SimpleXMLElement $xml)
     {
-        return new Extensions();
+        return new Extensions($xml);
     }
 }
