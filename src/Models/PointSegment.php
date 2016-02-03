@@ -9,7 +9,7 @@ class PointSegment implements FromXML
      * PointSegment constructor.
      * @param Point[] $points
      */
-    public function __construct(array $points = null)
+    public function __construct(array $points = array())
     {
         $this->points = $points;
     }

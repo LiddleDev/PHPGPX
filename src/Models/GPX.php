@@ -33,7 +33,7 @@ class GPX implements FromXML
      * @param Track[] $tracks
      * @param Extensions $extensions
      */
-    public function __construct($version, $creator, Metadata $metadata = null, array $waypoints = null, array $routes = null, array $tracks = null, Extensions $extensions = null)
+    public function __construct($version, $creator, Metadata $metadata = null, array $waypoints = array(), array $routes = array(), array $tracks = array(), Extensions $extensions = null)
     {
         $this->version = $version;
         $this->creator = $creator;

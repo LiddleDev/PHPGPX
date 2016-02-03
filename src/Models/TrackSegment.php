@@ -13,7 +13,7 @@ class TrackSegment implements FromXML
      * @param Waypoint[] $trackPoints
      * @param Extensions $extensions
      */
-    public function __construct(array $trackPoints = null, Extensions $extensions = null)
+    public function __construct(array $trackPoints = array(), Extensions $extensions = null)
     {
         $this->trackPoints = $trackPoints;
         $this->extensions = $extensions;

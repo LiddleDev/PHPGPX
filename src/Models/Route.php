@@ -41,7 +41,7 @@ class Route implements FromXML
      * @param Extensions $extensions
      * @param Waypoint[] $routePoints
      */
-    public function __construct($name = null, $comment = null, $description = null, $source = null, array $links = null, $number = null, $type = null, Extensions $extensions = null, array $routePoints = null)
+    public function __construct($name = null, $comment = null, $description = null, $source = null, array $links = array(), $number = null, $type = null, Extensions $extensions = null, array $routePoints = array())
     {
         $this->name = $name;
         $this->comment = $comment;

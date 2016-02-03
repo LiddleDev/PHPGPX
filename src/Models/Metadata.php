@@ -41,7 +41,7 @@ class Metadata implements FromXML
      * @param Bounds $bounds
      * @param Extensions $extensions
      */
-    public function __construct($name = null, $description = null, Person $author = null, Copyright $copyright = null, array $links = null, $time = null, $keywords = null, Bounds $bounds = null, Extensions $extensions = null)
+    public function __construct($name = null, $description = null, Person $author = null, Copyright $copyright = null, array $links = array(), $time = null, $keywords = null, Bounds $bounds = null, Extensions $extensions = null)
     {
         $this->name = $name;
         $this->description = $description;
