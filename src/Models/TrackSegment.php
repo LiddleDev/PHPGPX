@@ -1,5 +1,9 @@
 <?php
 
+namespace GPXParser\Models;
+
+use GPXParser\InvalidGPXException;
+
 class TrackSegment implements FromXML
 {
     /** @var  Waypoint[] */
@@ -52,11 +56,11 @@ class TrackSegment implements FromXML
     }
 
     /**
-     * @param SimpleXMLElement $xml
+     * @param \SimpleXMLElement $xml
      * @return TrackSegment
      * @throws InvalidGPXException
      */
-    public static function fromXML(SimpleXMLElement $xml)
+    public static function fromXML(\SimpleXMLElement $xml)
     {
         $trackSegment = new TrackSegment();
 

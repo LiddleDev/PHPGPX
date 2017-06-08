@@ -1,5 +1,9 @@
 <?php
 
+namespace GPXParser\Models;
+
+use GPXParser\InvalidGPXException;
+
 class Person implements FromXML
 {
     /** @var  string */
@@ -73,11 +77,11 @@ class Person implements FromXML
     }
 
     /**
-     * @param SimpleXMLElement $xml
+     * @param \SimpleXMLElement $xml
      * @return Person
      * @throws InvalidGPXException
      */
-    public static function fromXML(SimpleXMLElement $xml)
+    public static function fromXML(\SimpleXMLElement $xml)
     {
         $person = new Person();
 

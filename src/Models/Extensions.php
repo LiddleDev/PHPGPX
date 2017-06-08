@@ -1,15 +1,17 @@
 <?php
 
+namespace GPXParser\Models;
+
 class Extensions implements FromXML
 {
     protected $xml;
 
-    public function __construct(SimpleXMLElement $xml = null) {
+    public function __construct(\SimpleXMLElement $xml = null) {
         $this->xml = $xml;
     }
 
     /**
-     * @return SimpleXMLElement
+     * @return \SimpleXMLElement
      */
     public function getXml()
     {
@@ -17,7 +19,7 @@ class Extensions implements FromXML
     }
 
     /**
-     * @param SimpleXMLElement $xml
+     * @param \SimpleXMLElement $xml
      */
     public function setXml($xml)
     {
@@ -25,10 +27,10 @@ class Extensions implements FromXML
     }
 
     /**
-     * @param SimpleXMLElement $xml
+     * @param \SimpleXMLElement $xml
      * @return Extensions
      */
-    public static function fromXML(SimpleXMLElement $xml)
+    public static function fromXML(\SimpleXMLElement $xml)
     {
         return new Extensions($xml);
     }

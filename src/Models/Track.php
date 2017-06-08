@@ -1,5 +1,7 @@
 <?php
 
+namespace GPXParser\Models;
+
 class Track implements FromXML
 {
     /** @var  string */
@@ -199,10 +201,10 @@ class Track implements FromXML
     }
 
     /**
-     * @param SimpleXMLElement $xml
+     * @param \SimpleXMLElement $xml
      * @return Track
      */
-    public static function fromXML(SimpleXMLElement $xml)
+    public static function fromXML(\SimpleXMLElement $xml)
     {
         $track = new Track();
 

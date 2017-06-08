@@ -1,5 +1,9 @@
 <?php
 
+namespace GPXParser\Models;
+
+use GPXParser\InvalidGPXException;
+
 class Metadata implements FromXML
 {
     /** @var  string */
@@ -199,11 +203,11 @@ class Metadata implements FromXML
     }
 
     /**
-     * @param SimpleXMLElement $xml
+     * @param \SimpleXMLElement $xml
      * @return Metadata
      * @throws InvalidGPXException
      */
-    public static function fromXML(SimpleXMLElement $xml)
+    public static function fromXML(\SimpleXMLElement $xml)
     {
         $metadata = new Metadata();
 
