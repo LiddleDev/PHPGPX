@@ -1,5 +1,9 @@
 <?php
 
+namespace GPXParser\Models;
+
+use GPXParser\InvalidGPXException;
+
 class Email implements FromXML
 {
     /** @var  string */
@@ -52,11 +56,11 @@ class Email implements FromXML
     }
 
     /**
-     * @param SimpleXMLElement $xml
+     * @param \SimpleXMLElement $xml
      * @return Email
      * @throws InvalidGPXException
      */
-    public static function fromXML(SimpleXMLElement $xml)
+    public static function fromXML(\SimpleXMLElement $xml)
     {
         $attributes = $xml->attributes();
 

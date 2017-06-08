@@ -1,6 +1,8 @@
 <?php
 
-class InvalidGPXException extends Exception
+namespace GPXParser;
+
+class InvalidGPXException extends \Exception
 {
 
 }

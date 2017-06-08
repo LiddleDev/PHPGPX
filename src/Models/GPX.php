@@ -1,5 +1,9 @@
 <?php
 
+namespace GPXParser\Models;
+
+use GPXParser\InvalidGPXException;
+
 class GPX implements FromXML
 {
     /** @var  float */
@@ -157,11 +161,11 @@ class GPX implements FromXML
     }
 
     /**
-     * @param SimpleXMLElement $xml
+     * @param \SimpleXMLElement $xml
      * @return GPX
      * @throws InvalidGPXException
      */
-    public static function fromXML(SimpleXMLElement $xml)
+    public static function fromXML(\SimpleXMLElement $xml)
     {
         if ($xml->getName() != 'gpx') {
             throw new InvalidGPXException("Root node should be 'gpx'");

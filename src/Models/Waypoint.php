@@ -1,5 +1,9 @@
 <?php
 
+namespace GPXParser\Models;
+
+use GPXParser\InvalidGPXException;
+
 class Waypoint implements FromXML
 {
     /** @var  float */
@@ -70,7 +74,7 @@ class Waypoint implements FromXML
      * @param float $latitude
      * @param float $longitude
      * @param float $elevation
-     * @param datetime $time
+     * @param \DateTime $time
      * @param float $magvar
      * @param float $geoidheight
      * @param string $name
@@ -451,11 +455,11 @@ class Waypoint implements FromXML
     }
 
     /**
-     * @param SimpleXMLElement $xml
+     * @param \SimpleXMLElement $xml
      * @return Waypoint
      * @throws InvalidGPXException
      */
-    public static function fromXML(SimpleXMLElement $xml)
+    public static function fromXML(\SimpleXMLElement $xml)
     {
         $attributes = $xml->attributes();
 
